@@ -21,6 +21,12 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+  # 以下の3行を手動で追加した
+  username: your_bookshelf_api_proto
+  password: password
+  # RailsサーバとPostgreSQLサーバが同じ場合
+  host: localhost
+
 development:
   <<: *default
   database: your_bookshelf_api_proto_development

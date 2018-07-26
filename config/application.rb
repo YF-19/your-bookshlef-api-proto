@@ -29,5 +29,7 @@ module YourBookshelfApiProto
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    # cookiesを使用するため手動で追記した
+    config.middleware.use ActionDispatch::Cookies
   end
 end
