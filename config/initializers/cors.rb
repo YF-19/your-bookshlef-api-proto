@@ -17,14 +17,15 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
+    origins 'https://intense-dawn-44468.herokuapp.com'
     # origins 'http://localhost:4200'
-    origins '*'
+    # origins '*'
 
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       expose: ['Set-Cookie'],
-      # credentials: true
-      credentials: false
+      credentials: true
+      # credentials: false
   end
 end
